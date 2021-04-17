@@ -1,3 +1,5 @@
+
+
 # -*- coding: utf-8 -*-
 """Application configuration."""
 import os
@@ -34,8 +36,7 @@ class ProdConfig(Config):
 
     ENV = 'prod'
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL',
-                                             'postgresql://localhost/example')
+    SQLALCHEMY_DATABASE_URI ='postgresql://chinwenducecilia1:password@10.80.240.4:5432/flask'
 
 
 class DevConfig(Config):
