@@ -1,0 +1,65 @@
+---
+
+- name: Configuring VM for deploying flask app
+  hosts: localhost
+  environment:
+     FLASK_APP=/home/chinwenducecilia1/flask-realworld-example-app/autoapp.py
+  vars:
+   local_home: "{{ lookup('env', 'HOME')}}"
+   dir: "{{ local_home }}/flask-realworld-example-app/"
+  become: yes
+  become_user: root
+  tasks:
+  - name: Installing nginx on server
+    apt:
+     name: nginx
+     state: latest
+  - name: Run a script
+    script: ./install.sh
+    args:
+     executable: bash
+  - name: Clone flask app repository
+    git:
+      repo: 'https://github.com/Chinwendu20/flask-realworld-example-app.git'
+      dest: ./flask-realworld-example-app/
+      clone: yes
+  - name: Installing pip for python3
+    apt:
+     name: python3-pip
+  - name: Installing virtual env
+    apt:
+     name: virtualenv
+  - name: Install requirements
+    pip:
+     requirements:  "{{dir}}/requirements/dev.txt"
+     virtualenv: /home/chinwenducecilia1/flask-realworld-example-app/venv
+     virtualenv_python: python3.7
+  - name: Initializing and setting up the db
+    shell: source /home/chinwenducecilia1/flask-realworld-example-app/venv/bin/activate;flask db init; flask db migrate; flask db upgrade 
+    args:
+      chdir: /home/chinwenducecilia1/flask-realworld-example-app/
+    ignore_errors: yes
+  - name: Initializing and setting up the db
+    shell: source /home/chinwenducecilia1/flask-realworld-example-app/venv/bin/activate; flask db migrate; flask db upgrade
+    args:
+      chdir: /home/chinwenducecilia1/flask-realworld-example-app/
+    ignore_errors: yes
+  - name: Creating systemd unit file for gunicorn
+    copy:
+     src:  "{{ local_home }}/flask.service"
+     dest: /etc/systemd/system/flask.service
+  - name: Creating nginx configuration
+    ansible.builtin.copy:
+     src:  "{{ local_home }}/app"
+     dest: /etc/nginx/sites-enabled/app
+  - name: Restart Nginx
+    service:
+        name: nginx
+        state: restarted
+  - name: Reload daemon
+    shell: sudo systemctl daemon-reload
+
+  - name: Restart flask.service
+    service:
+        name: flask.service
+        state: restarted

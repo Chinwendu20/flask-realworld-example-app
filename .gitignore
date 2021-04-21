@@ -1,5 +1,6 @@
 *.py[cod]
 migrations/
+venv/
 # C extensions
 *.so
 
