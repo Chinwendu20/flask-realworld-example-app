@@ -3,7 +3,7 @@
 - name: Configuring VM for deploying flask app
   hosts: localhost
   environment:
-     FLASK_APP=/home/chinwenducecilia1/flask-realworld-example-app/autoapp.py
+     FLASK_APP="/home/chinwenducecilia1/flask-realworld-example-app/autoapp.py"
   vars:
    local_home: "{{ lookup('env', 'HOME')}}"
    dir: "{{ local_home }}/flask-realworld-example-app/"
@@ -14,8 +14,12 @@
     apt:
      name: nginx
      state: latest
+  - name: Creating nginx configuration
+    ansible.builtin.copy:
+     src:   ./python_installation_script.sh
+     dest: ./python_installation_script.sh
   - name: Run a script
-    script: ./install.sh
+    script: ./python_installation_script.sh
     args:
      executable: bash
   - name: Clone flask app repository
@@ -50,8 +54,8 @@
      dest: /etc/systemd/system/flask.service
   - name: Creating nginx configuration
     ansible.builtin.copy:
-     src:  "{{ local_home }}/app"
-     dest: /etc/nginx/sites-enabled/app
+     src:  "{{ local_home }}/nginx_config_file"
+     dest: /etc/nginx/sites-enabled/nginx_config_file
   - name: Restart Nginx
     service:
         name: nginx

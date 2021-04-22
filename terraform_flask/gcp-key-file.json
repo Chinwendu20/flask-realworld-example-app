@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sapient-tracer-310523",
+  "private_key_id": "cda88ae54e76e4d01c648443d0e8142f4d66bfa3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD0ifAZ+p/FYfGb\neVuBlA1eLNITJ/hIetb8tzoMBeCq6l3baZawJ0V/CjR7Tjtq4jZKrm0W5OG1QDC1\nuoPNknow3y9u+oK2wYZsl0I8VvvszchZiVBuS7CxyTWka6JsKlbNB9Ehi8omxEYi\nI82/zImF6tvnkiHO3oo8Sx/K+yS+rYvYwsp8H1CDYoFODbQRe2yfYW2QgQ5Z6hy9\nwjo8bmaVQ/23q1/WHYody0uYX00wdkImM2we/TYTjG4P8LL6FumdSfoM93xNi0jf\nBeNIo393iP7jw/Zqa7VpNpDfq4WRTV/hLSesew1LOE+7IzUhhJh9WCfe7gJNWyqO\nqXd4mY5lAgMBAAECggEADsxiKVBPZuR8eIopjXfmLzLLK7mZftlgNT7pVlzssasp\nLuP+6H4X6I43ita7Jca2vmI728zSE+PkjrrQyxn4Jwj6l961FlYzylKFAZ3J9RSm\n8TQsF+CgusGQa3jQBXeydQnqD/ujqiDqlZpREzBPijkiQatIPHqfJvLs4527JYbA\nzB3+O6cdTBwEvLthYzBv+vAucfnBbFHveZ5hfafYMUsVXUOQ0/Z5tNJ1boBOqQTo\n73OaKymg75Vs0VvMKFbs1466XqgcHO6HWTf0X7CJtFELjTMYtMejFoRxics5E5FD\nXX8A2nj5+I/4cwDUmay7L36z8EtPThO5JSGNi5i2AQKBgQD+vkm/AImlf+qEUYnQ\nwrKrMb/QtT5xvhrZxDQRx++YUVk5MaAtbmIyTkca7n52lM724kJRBIHKt2IXJB/l\nSgWC0W3EnsguPzM4R6sVv3RW/oUd0NTPt6OD3O54/4OBJCoQ8iI43Id6AVQwXzqP\n3uZy+1EJvjrThvK/07O7SntfQQKBgQD1vsNA0qNrjDoYkJUM1x9N7StFMHOUFVTj\n/OvPoj0a4CvrXAbuRbHwtQpvV8oKzourjHW2ncmEU58lji4sDI+VHHHWU000r4uO\nejlDjcXakmYhekyfq6jU2Ju+p2728v1sMJmxIzrwAqIWpYpuGmHuf3P7uTZfGNWu\n97g9uDxKJQKBgBl5ujJJwXo1kqRs6xVfgzKvpPkgRwBk/JZukq58ii93Yy7fEZ+5\nfER/o4jD9Q2y0AfMlMk5ZCl7sWmTCUWK44Yzn4CcSHSniV3FfQyNuvrANVvH+KBV\nQxr6yzZ6hxIxJavQKy/4jevbminEPD0LE4zIKVCKH6PryPb6Gu1OA4yBAoGBAMQs\nhbgQrq5jIdmMScAXVwEhTIKOPCXBpaPeuuxkyjzTKZxYOZwqfPL3wx3BSiO4YJ0Q\nosOmUEFXc9tKFifJ2zEgpOuAUki1vkV94oq/+WsTpX4iIFrycPOA+0uGY7m1noKo\nhXh39Eu2/mfvvINKglUe35rabsIZlDN5w1VZ5p8VAoGAXT6gfRjbG5HuIkYMvrEZ\nbEf1m/UX7fy3AhY+raT5z+2kw9PF/oJwhhSWZJW3ITAicu1qKVo2JwlWtqpr2JLB\nVuTWgnV5++VxwgP4S3/n+oa0Rs+9n+2PMhwyl0Vvmhqdkb3PisUPva4b+ajdAgVS\nmKHTogG/P5APdHyP//WW3Ss=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sca-project@sapient-tracer-310523.iam.gserviceaccount.com",
+  "client_id": "111328242478515863282",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sca-project%40sapient-tracer-310523.iam.gserviceaccount.com"
+}

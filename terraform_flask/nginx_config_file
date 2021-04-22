@@ -1,0 +1,10 @@
+server{
+        listen 80;
+        server_name 35.188.43.241;
+
+
+location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/chinwenducecilia1/flask-realworld-example-app/flask-realworld-example-app.sock;
+        }
+}
