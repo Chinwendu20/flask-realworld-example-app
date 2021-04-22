@@ -1,6 +1,8 @@
 *.py[cod]
 migrations/
 venv/
+terraform_flask/gcp-key-file.json
+terraform_flask/*.save
 # C extensions
 *.so
 
